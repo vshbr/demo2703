@@ -30,4 +30,7 @@ public partial class Partner
     public int PlacesalesId { get; set; }
 
     public int HistorySalesId { get; set; }
+
+
+    public virtual RatingHistory RatingHistory { get; set; } = null!;
 }

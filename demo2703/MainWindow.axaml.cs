@@ -13,9 +13,7 @@ namespace demo2703
         public MainWindow()
         {
             InitializeComponent();
-
             PartnerListBox.ItemsSource = Partner;
-
         }
 
         private void Button_Click_History(object? sender, Avalonia.Interactivity.RoutedEventArgs e)

@@ -8,14 +8,14 @@ namespace demo2703;
 
 public partial class AddWindow : Window
 {
-    private Partner _partner;
+    private Partner partner;
     public AddWindow()
     {
         InitializeComponent();
 
-        _partner = new Partner(); 
+        partner = new Partner(); 
         TypeComboBox.ItemsSource = Helper.Context.Partners; 
-        PartnerPanel.DataContext = _partner;
+        PartnerPanel.DataContext = partner;
     }
 
     public void Button_OnClick_Back(object? sender, RoutedEventArgs e) 
@@ -27,14 +27,14 @@ public partial class AddWindow : Window
 
     public void Button_Click_Save(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        if (_partner.Partnersid == 0) 
+        if (partner.Partnersid == 0) 
         { 
-            Helper.Context.Partners.Add(_partner); 
+            Helper.Context.Partners.Add(partner); 
             Helper.Context.SaveChanges(); 
         } 
         else 
         { 
-            Helper.Context.Partners.Update(_partner); 
+            Helper.Context.Partners.Update(partner); 
             Helper.Context.SaveChanges(); 
         }
 
